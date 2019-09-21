@@ -136,7 +136,7 @@ int main (int argc, char *argv[]) {
             /* timeout */
             close(sockfd);
             if (verbose)
-                fprintf(stdout, "%s port %s user timeout.\n", argv[optind], argv[optind+1]);
+                fprintf(stdout, "%s port %s timeout.\n", argv[optind], argv[optind+1]);
             return(2);
         }
         if (FD_ISSET(sockfd, &fdrset) || FD_ISSET(sockfd, &fdwset)) {
