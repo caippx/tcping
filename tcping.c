@@ -136,7 +136,7 @@ int main (int argc, char *argv[]) {
             /* timeout */
             close(sockfd);
             if (verbose)
-                fprintf(stdout, "%s port %s timeout.\n", argv[optind], argv[optind+1]);
+                fprintf(stdout, "timeout", argv[optind], argv[optind+1]);
             return(2);
         }
         if (FD_ISSET(sockfd, &fdrset) || FD_ISSET(sockfd, &fdwset)) {
@@ -150,7 +150,7 @@ int main (int argc, char *argv[]) {
             }
             if (error != 0) {
                 if (verbose)
-                    fprintf(stdout, "%s port %s closed.\n", argv[optind], argv[optind+1]);
+                    fprintf(stdout, "closed", argv[optind], argv[optind+1]);
                 close(sockfd);
                 return(1);
             }
@@ -163,7 +163,7 @@ int main (int argc, char *argv[]) {
     /* OK, connection established */
     close(sockfd);
     if (verbose)
-        fprintf(stdout, "%s port %s open.\n", argv[optind], argv[optind+1]);
+        fprintf(stdout, "open", argv[optind], argv[optind+1]);
     return 0;
 }
 
